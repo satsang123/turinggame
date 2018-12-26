@@ -1,0 +1,139 @@
+var dice1 : int
+var answer : string
+var Bcave : string
+var Scabin : string
+var choice : string
+% Variables
+randint (dice1, 1 , 6)
+%Dice randomizer
+
+
+setscreen ("graphics")
+    %background 
+    drawfill (1, 1, 19, 19)
+
+    %trees
+    drawfillbox (87, 230, 120, 2, 115)
+    drawfilloval (110, 190, 100, 120, green)
+    drawfillbox (425, 220, 365, 2, 115)
+    drawfilloval (390, 170, 110, 120, green)
+    drawfillbox (240, 120, 250, 2, 115)
+    drawfilloval (250, 140, 60, 90, green)
+    drawfillbox (559, 120, 566, 2, 115)
+    drawfilloval (570, 200, 90, 120, green)
+
+
+put "You are stuck in a forest and can't find a way out. Your life is a survival game now. If you have luck by your side, you'll live to tell the tale. If you don't, well...."
+delay (2000)
+put  "Roll the dice, if you get 3 or lower, go left, if you get 4 or higher, go right." 
+delay (1000)
+put "Roll the dice to play? Yes/No"
+
+get answer
+if ((answer = "Yes") or (answer ="yes")) then
+put "Lets go!"
+elsif ((answer not= "Yes") or (answer not="yes")) then
+put "Too bad you are still playing this game"
+end if
+
+
+
+put "As you go, you find a bear cave."
+delay (2000)
+put "You go near the bear cave"
+delay (2000)
+put "You suddenly get teleported to a spooky mansion"
+delay (1400)
+
+setscreen ("graphics")
+    % background
+    drawfill (1, 1, 20, 20)
+
+    % basic house
+    drawbox (100, 100, 200, 200, 18)
+    drawfill (101, 101, 2, 18)
+
+    % roof
+       drawline (100, 200, 150, 250, 112)
+    drawline (150, 250, 200, 200, 112)
+    drawline (200, 200, 100, 200, 112)
+    drawfill (150, 225, 112, 112)
+
+    % door
+    drawfillbox (135, 100, 165, 150, brown)
+
+    % windows
+    drawfilloval (120, 175, 10, 10, grey)
+    drawfilloval (175, 175, 10, 10, grey)
+
+    % moon
+    drawfilloval (595, 360, 39, 39, white)
+
+    % trees
+    drawfillbox (559, 120, 566, 2, 115)
+    drawfilloval (570, 200, 90, 100, green)
+    drawfillbox (410, 150, 360, 2, 115)
+    drawfilloval (385, 150, 102, 90, green)
+    %house image
+
+
+put "Roll the dice. If you roll anything you exit the mansion unharmed the next morning because not all spooky mansions have ghosts." 
+delay (2000)
+%cabin part
+put "Roll the dice? Yes/No"
+get answer
+if ((answer = "Yes") or (answer = "yes")) then
+put "You rolled ",dice1
+put "You had a good night's sleep and get up the next morning and leave the mansion"
+put "You continue to walk around the forest trying to find a way out."
+delay (1500)
+
+elsif ((answer = "No") or (answer = "no")) then
+put "You died for being a pussy" 
+return
+end if
+put "You find something sticking out of the ground. Do you want to dig it up?" 
+delay (2000)
+put "Roll the dice? Yes/No"
+get choice
+%Potential Treasure sticking out
+
+if ((choice = "Yes") or (choice ="yes")) then
+for x : 1..6
+put "Diggin hole"
+delay (1500)
+%For loop diggin hole
+end for
+put "The item you now possess is garlic bread that you can eat to help you survive."
+delay (1500)
+put "The End"
+
+elsif ((choice = "No") or (choice ="no")) then
+put "After you finally get out of the forest and go home, you have severe trauma from your experience."
+delay (2000)
+put "You cannot focus on any of your work and therefore lose your job and can not find a stable income."
+delay (2000)
+put "You don't have the money to pay off your mortgage and so your house is owned by the bank."
+delay (2000)
+put "You are now on the streets trying to recover but no one offers you any job."
+delay (2000)
+put "As the last option, you turn to the world of crime and sell drugs and steal money from the bank."
+delay (2000)
+put "Eventually you get caught and face a life sentence to jail."
+delay (2000)
+delay (1000)
+put "You rot in jail and finally die thirty years later."
+(2000)
+put "The End"
+return
+%Big long story end
+end if
+
+
+%Ending
+
+
+
+
+
+
